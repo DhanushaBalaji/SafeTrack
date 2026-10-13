@@ -1,0 +1,44 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ContextTrail | SafeTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🧭 ContextTrail</h1>
+    <p>Track news updates, changing reports, and their sources.</p>
+    <p><a href="/">← Back to ClaimCheck</a></p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Track a News Story</h2>
+      <p>Enter a news headline or topic. ContextTrail will search
+         for related reports automatically.</p>
+
+      <label for="newsTopic">News headline or topic</label>
+      <textarea id="newsTopic" rows="4"
+        placeholder="Example: ISRO's latest satellite mission"></textarea>
+
+      <button id="searchButton" onclick="searchNews()">
+        Find News Updates
+      </button>
+
+      <p id="newsStatus" aria-live="polite"></p>
+    </section>
+
+    <section id="newsResults" class="card hidden">
+      <h2>News Update Timeline</h2>
+      <p id="resultNote"></p>
+      <div id="newsTimeline"></div>
+    </section>
+  </main>
+
+  <script src="contexttrail.js"></script>
+</body>
+</html>
+```

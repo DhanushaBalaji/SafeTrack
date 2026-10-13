@@ -1,0 +1,74 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShareWise | SafeTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛡️ ShareWise</h1>
+    <p>Pause. Check the evidence. Then decide whether to share.</p>
+    <p><a href="/">← Back to ClaimCheck</a></p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Check Before Sharing</h2>
+      <p>Paste a forwarded message, social post, or headline.</p>
+
+      <textarea id="shareText" rows="6"
+        placeholder="Paste the message you want to check..."></textarea>
+
+      <button id="checkButton" onclick="checkBeforeSharing()">
+        Check Before Sharing
+      </button>
+
+      <p id="shareStatus" aria-live="polite"></p>
+    </section>
+
+    <section id="shareResult" class="card hidden">
+      <h2>ShareWise Assessment</h2>
+
+      <h3>Assessment Result</h3>
+      <p id="riskLabel"></p>
+      <p id="shareSummary"></p>
+
+      <hr>
+
+      <h3>✅ Supporting Evidence</h3>
+      <ul id="supportingEvidence"></ul>
+
+      <hr>
+
+      <h3>❌ Contradicting Evidence</h3>
+      <ul id="contradictingEvidence"></ul>
+
+      <hr>
+
+      <h3>🔎 Missing Context</h3>
+      <p id="missingContext"></p>
+
+      <hr>
+
+      <h3>⚠️ Uncertainty</h3>
+      <p id="uncertainty"></p>
+
+      <hr>
+
+      <h3>🔗 Sources to Review</h3>
+      <ul id="shareSources"></ul>
+
+      <p>
+        <strong>Before you share:</strong>
+        An AI assessment is not a guarantee. Read the original sources
+        and consider the evidence before forwarding the message.
+      </p>
+    </section>
+  </main>
+
+  <script src="sharewise.js"></script>
+</body>
+</html>
